@@ -5534,11 +5534,11 @@ var armory_trait_internal_CanvasScript = function(canvasName,font) {
 	var _gthis = this;
 	iron_Trait.call(this);
 	iron_data_Data.getBlob(canvasName + ".json",function(blob) {
-		iron_data_Data.getBlob("_themes.json",function(tBlob) {
+		iron_data_Data.getBlob("athemes.json",function(tBlob) {
 			if(tBlob.get_length() != 0) {
 				zui_Canvas.themes = JSON.parse(tBlob.toString());
 			} else {
-				haxe_Log.trace("\"_themes.json\" is empty! Using default theme instead.",{ fileName : "Sources/armory/trait/internal/CanvasScript.hx", lineNumber : 34, className : "armory.trait.internal.CanvasScript", methodName : "new"});
+				haxe_Log.trace("\"athemes.json\" is empty! Using default theme instead.",{ fileName : "Sources/armory/trait/internal/CanvasScript.hx", lineNumber : 34, className : "armory.trait.internal.CanvasScript", methodName : "new"});
 			}
 			if(zui_Canvas.themes.length == 0) {
 				zui_Canvas.themes.push(zui_Themes.light);
